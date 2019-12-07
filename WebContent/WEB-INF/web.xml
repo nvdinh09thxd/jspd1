@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>JSPD2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>HinhChuNhatController</servlet-name>
+    <servlet-class>controller.HinhChuNhatController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HinhChuNhatController</servlet-name>
+    <url-pattern>/hinh-chu-nhat</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TuoiController</servlet-name>
+    <servlet-class>controller.TuoiController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TuoiController</servlet-name>
+    <url-pattern>/tinh-tuoi</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BaiTap2</servlet-name>
+    <servlet-class>baitap.BaiTap2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BaiTap2</servlet-name>
+    <url-pattern>/bai-tap-2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BaiTap3</servlet-name>
+    <servlet-class>baitap.BaiTap3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BaiTap3</servlet-name>
+    <url-pattern>/bai-tap-3</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BaiTap4</servlet-name>
+    <servlet-class>baitap.BaiTap4</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BaiTap4</servlet-name>
+    <url-pattern>/bai-tap-4</url-pattern>
+  </servlet-mapping>
+</web-app>
