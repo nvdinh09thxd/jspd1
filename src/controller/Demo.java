@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/trang-web-1")
 public class Demo extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
 	//Servlet: là một file java, nhưng kế thừa từ lớp httpServlet nên có thể chạy được trên server
 	protected void doGet(HttpServletRequest request, HttpServletResponse respone) throws IOException {
 		PrintWriter out = respone.getWriter();
