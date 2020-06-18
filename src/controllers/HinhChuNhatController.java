@@ -1,4 +1,4 @@
-package controller;
+package controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -24,13 +24,13 @@ public class HinhChuNhatController extends HttpServlet {
 		// Tạo 2 số ngẫu nhiên, tính diện tích của hình chữ nhật
 		res.setContentType("text/html");
 		res.setCharacterEncoding("utf-8");
-		
+
 		PrintWriter out = res.getWriter();
 		Random rd = new Random();
 		int chieuDai = rd.nextInt(20);
 		int chieuRong = rd.nextInt(20);
 		int dt = chieuDai * chieuRong;
-		//Số chiều dài có màu đỏ, chiều rộng có màu xanh, diện tích có màu tím đậm
+		// Số chi�?u dài có màu đ�?, chi�?u rộng có màu xanh, diện tích có màu tím đậm
 		out.print("<h2>Tính diện tích hình chữ nhật!</h2>");
 		out.print("<p style='color: red'>Chieu dai: " + chieuDai + "</p>");
 		out.print("<p style='color: blue'>Chieu rong: " + chieuRong + "</p>");

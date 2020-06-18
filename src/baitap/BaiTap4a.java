@@ -22,7 +22,7 @@ public class BaiTap4a extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 		Random rd = new Random();
-		int number = rd.nextInt(90) + 10;
+		int number = rd.nextInt(91) + 10;
 		if (number % 3 == 0)
 			out.println("Số " + number + " Chia hết cho 3!");
 		else

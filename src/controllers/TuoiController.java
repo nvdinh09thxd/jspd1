@@ -1,4 +1,4 @@
-package controller;
+package controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,7 +18,6 @@ public class TuoiController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
