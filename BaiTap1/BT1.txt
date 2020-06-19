@@ -1,0 +1,9 @@
+﻿Sự khác nhau giữa SERVLET và JSP:
+1. Trong SERVLET, sau khi sửa lại thông tin, 
+phải chạy lại server, còn JSP thì không cần chạy lại server
+
+2. Trong JSP có thể dễ dàng dùng các thẻ HTML như trong trang HTML
+còn SERVLET thì khó khăn hơn
+
+3. trong SERVLET dễ code phương thức và hàm, 
+còn trong JSP thì khó hơn

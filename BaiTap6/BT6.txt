@@ -1,0 +1,9 @@
+a1) Tạo cơ sở dữ liệu myfriends: Thực hiện trên phần mềm
+a2) Tạo bảng friend_list và chèn dữ liệu vào: Thực hiện trên phần mềm
+a3) Tạo bảng friends và chèn dữ liệu vào: Thực hiện trên phần mềm
+
+b1) Sửa "Bạn chí cốt" thành "Bạn tri kỷ" tại fl_id là 4:
+UPDATE friend_list SET flname = "Bạn tri kỷ" WHERE fl_id = 4;
+b2) Cập nhật date_create cho các dòng chưa có dữ liệu với dữ liệu tự nhập:
+UPDATE friends SET date_create = "2018-05-09 19:18:11" WHERE fid = 3;
+UPDATE friends SET date_create = "2018-05-06 19:16:11" WHERE fid = 5;
