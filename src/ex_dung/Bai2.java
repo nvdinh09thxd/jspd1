@@ -1,36 +1,45 @@
-package baitap;
+package ex_dung;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Random;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class BaiTap4a extends HttpServlet {
+@WebServlet("/Bai2")
+public class Bai2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public BaiTap4a() {
+	public Bai2() {
 		super();
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
-		Random rd = new Random();
-		int number = rd.nextInt(91) + 10;
-		if (number % 3 == 0)
-			out.println("Số " + number + " Chia hết cho 3!");
-		else
-			out.println("Số " + number + " Không chia hết cho 3!");
+		flower(out);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// doGet(request, response);
+	}
+
+	public void flower(PrintWriter out) {
+		String tenHoa = "Hoa mẫu đơn";
+		int giaBan = 120000;
+		int soLuong = 4;
+		int thanhTien = giaBan * soLuong;
+		out.print("Tên hoa: " + tenHoa + " <br />");
+		out.print("Giá bán: " + giaBan + " VNĐ - Số lượng: " + soLuong + " <br />");
+		out.print("Thành tiền: " + thanhTien + " VNĐ");
 	}
 
 }

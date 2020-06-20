@@ -1,36 +1,43 @@
-package baitap;
+package ex_dung;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Random;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class BaiTap4b extends HttpServlet {
+@WebServlet("/Bai3")
+public class Bai3 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public BaiTap4b() {
+	public Bai3() {
 		super();
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
-		Random rd = new Random();
-		int number = rd.nextInt(91) + 10;
-		if (number >= 15 && number <= 90)
-			out.println("Số " + number + " Nằm trong khoảng 15 đến 90!");
-		else
-			out.println("Số " + number + " Không nằm trong khoảng 15 đến 90!");
+		bai3(out);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// doGet(request, response);
+	}
+
+	public void bai3(PrintWriter out) {
+		int tongBanGhi = 57;
+		int soBanGhiCuaTrang = 10;
+		double soTrang = (double) tongBanGhi / (double) soBanGhiCuaTrang;
+		out.print("Số trang làm tròn tăng: " + Math.ceil(soTrang) + " <br />");
+		out.print("Số trang làm tròn giảm: " + Math.floor(soTrang));
 	}
 
 }
